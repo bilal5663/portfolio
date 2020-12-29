@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/favicon.png">
+    <title>UI/UX for web and mobile</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&display=swap" rel="stylesheet">
+    <!-- end font -->
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div class="fakeLoader"></div>
+    <!-- loader -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 92 92.1">
+  <defs>
+    <filter id="polycleaner">
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.5 1 1" />
+      </feComponentTransfer>
+    </filter>
+
+    <polyline id="fan-clipShape" points="12.5,79.5 89.2,86.6 89.2,2.5 12.5,2.5		"/>
+
+    <clipPath id="fan-clipPath">
+      <use xlink:href="#fan-clipShape"/>
+    </clipPath>
+  </defs>
+
+  <g id="fan" clip-path="url(#fan-clipPath)" filter="url(#polycleaner)">
+    <polygon fill="#002E58" points="53.1,14 44.5,15.4 44.5,15.4 12.5,79.5"/>
+    <polygon fill="#004A8B" points="65.5,31.3 64.5,22.6 64.4,22.6 12.5,79.5"/>
+    <polygon fill="#002E58" points="64.4,22.6 55.7,22.4 55.7,22.4 12.5,79.5"/>
+    <polygon fill="#004A8B" points="32.1,10.7 26.7,3.8 26.7,3.8 12.5,79.5"/>
+    <polygon fill="#002E58" points="40.4,7.7 32.1,10.7 32.1,10.7 12.5,79.5"/>
+    <polygon fill="#004A8B" points="44.5,15.4 40.4,7.7 40.4,7.7 12.5,79.5"/>
+    <polygon fill="#002E58" points="89.2,72.4 82.9,66.4 82.9,66.3 12.5,79.5"/>
+    <polygon fill="#004A8B" points="55.7,22.4 53.1,14 53.1,14 12.5,79.5"/>
+    <polygon fill="#002E58" points="74,33.1 65.5,31.3 65.5,31.3 12.5,79.5	"/>
+    <polygon fill="#004A8B" points="79.3,53.6 81.5,45.2 81.5,45.2 12.5,79.5	"/>
+    <polygon fill="#002E58" points="86.6,58.4 79.3,53.7 79.3,53.6 12.5,79.5	"/>
+    <polygon fill="#004A8B" points="82.9,66.3 86.7,58.4 86.6,58.4 12.5,79.5	"/>
+    <polygon fill="#002E58" points="81.5,45.2 73.4,41.8 73.4,41.8 12.5,79.5	"/>
+    <polygon fill="#004A8B" points="84.2,79.5 89.3,72.4 89.2,72.4 12.5,79.5	"/>
+    <polygon fill="#002E58" points="26.7,3.8 19.1,8.2 19.1,8.2 12.5,79.5	"/>
+    <polygon fill="#00448D" points="73.4,41.8 74,33.1 74,33.1 12.5,79.5	"/>
+    <polygon fill="#002E58" points="84.2,79.5 12.5,79.5 89.2,86.6 84.1,79.5	"/>
+    <polygon fill="#004A8B" points="19.1,8.2 12.5,2.5 12.5,2.5 12.5,79.5	"/>
+  </g>
+
+  <g id="handles">
+    <polygon fill="#63639B" points="13.8,0 9.4,0.1 10.5,92.1 14.8,92"/>
+    <polygon fill="#1A8BB3" points="91.6,89.3 92,84.9 0.4,76.2 0,80.5"/>
+  </g>
+</svg>
+	<script>
+		var tmax_opts = {
+  repeat: -1,
+  repeatDelay: 0.25,
+  yoyo: true
+};
+
+var tmax_tl = new TimelineMax(tmax_opts);
+
+var handle_from = {
+  rotation: 0,
+  transformOrigin: '4px 87%'
+};
+
+var handle_to = {
+  rotation: 96,
+  ease: Cubic.easeInOut
+};
+
+var fan_from = {
+  opacity: 1,
+  rotation: 0,
+  transformOrigin: '0% 100%'
+};
+
+var fan_to = {
+  rotation: 94,
+  opacity: 0.25,
+  ease: Cubic.easeInOut
+}
+
+
+tmax_tl.fromTo( $('#handles > polygon:first-child'), 0.75, handle_from, handle_to, 0 )
+       .fromTo( $('#fan > polygon'), 0.75, fan_from, fan_to, 0 );
+	</script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fakeLoader.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.filterizr.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+	
+    <script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
